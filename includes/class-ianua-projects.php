@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      1.0.0
+ * @since      1.2
  * @package    Ianua_Projects
  * @subpackage Ianua_Projects/includes
  * @author     Your Name <email@example.com>

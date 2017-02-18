@@ -4,7 +4,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://ianua.imagewize.com
- * @since      1.0.0
+ * @since      1.0
  *
  * @package    Ianua_Projects
  * @subpackage Ianua_Projects/public

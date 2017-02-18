@@ -4,7 +4,7 @@
  * Fired during plugin activation
  *
  * @link       https://ianua.imagewize.com
- * @since      1.0.0
+ * @since      1.0
  *
  * @package    Ianua_Projects
  * @subpackage Ianua_Projects/includes
