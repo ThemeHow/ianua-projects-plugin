@@ -7,7 +7,7 @@
  * of control:
  *
  * - This method should be static
- * - Check if the $_REQUEST content actually is the plugin name
+ * - Check if the $_REQUEST content actually is the Ianua Projects
  * - Run an admin referrer check to make sure it goes through authentication
  * - Verify the output of $_GET makes sense
  * - Repeat with other user roles. Best directly by using the links/query string parameters.
@@ -19,10 +19,10 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       http://example.com
+ * @link       https://ianua.imagewize.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
+ * @package    Ianua_Projects
  */
 
 // If uninstall not called from WordPress, then exit.

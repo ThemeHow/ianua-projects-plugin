@@ -3,11 +3,11 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://example.com
+ * @link       https://ianua.imagewize.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Ianua_Projects
+ * @subpackage Ianua_Projects/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Ianua_Projects
+ * @subpackage Ianua_Projects/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Deactivator {
+class Ianua_Projects_Deactivator {
 
 	/**
 	 * Short Description. (use period)
