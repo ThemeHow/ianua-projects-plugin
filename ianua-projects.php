@@ -16,7 +16,7 @@
  * Plugin Name:       Ianua Projects
  * Plugin URI:        https://ianua.imagewize.com/ianua-projects/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.2
+ * Version:           1.2.1
  * Author:            Imagewize
  * Author URI:        https://magewize.com/
  * License:           GPL-2.0+
