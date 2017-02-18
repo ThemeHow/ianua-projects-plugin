@@ -186,7 +186,7 @@ class Ianua_Projects {
 	 * WordPress and to define internationalization functionality.
 	 *
 	 * @since     1.0.0
-	 * @return    string    The name of the plugin.
+	 * @return    string    Ianua Projects.
 	 */
 	public function get_Ianua_Projects() {
 		return $this->Ianua_Projects;

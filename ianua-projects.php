@@ -13,7 +13,7 @@
  * @package           Ianua_Projects
  *
  * @wordpress-plugin
- * Ianua Projects:    Ianua Projects
+ * Plugin Name:       Ianua Projects
  * Plugin URI:        https://ianua.imagewize.com/ianua-projects/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
