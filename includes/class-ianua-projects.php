@@ -156,7 +156,6 @@ class Ianua_Projects {
 		$this->loader->add_action( 'init', $plugin_admin, 'ianua_projects_cpt' );
 		$this->loader->add_action( 'init', $plugin_admin, 'ianua_projects_taxonomy' );
 
-
 	}
 
 	/**
