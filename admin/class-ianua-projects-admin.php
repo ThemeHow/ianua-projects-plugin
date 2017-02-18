@@ -90,7 +90,7 @@ class Ianua_Projects_Admin {
 				'show_tagcloud'              => true,
 				'rewrite'                    => true,
 			);
-			register_taxonomy( 'project-categories', array( 'project' ), $args );
+			register_taxonomy( 'project-categories', array( 'ianua_projects' ), $args );
 
 		}
 	
