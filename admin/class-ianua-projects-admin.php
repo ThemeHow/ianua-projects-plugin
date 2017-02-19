@@ -187,7 +187,7 @@ class Ianua_Projects_Admin {
 
 			   		</div>
 
-			    </div>
+			    </div> <!-- /row-intro -->
 
 	         	<div class="row items">
 
@@ -201,9 +201,10 @@ class Ianua_Projects_Admin {
 						</ul>
 		     			
 		     		</div>
-		    <div id="portfolio-wrapper" class="iw-projects bgrid-third tab-bgrid-half stack">
-	        <?php while ( $query->have_posts() ) : $query->the_post();global $post;?>
-	        
+
+				    <div id="portfolio-wrapper" class="iw-projects bgrid-third tab-bgrid-half stack">
+						        <?php while ( $query->have_posts() ) : $query->the_post();global $post;?>
+			        
 			         	<div class="bgrid folio-item <?php $posttags = get_the_tags();
 													if ($posttags) {
 													  foreach($posttags as $tag) {
@@ -214,7 +215,7 @@ class Ianua_Projects_Admin {
 			                  <a href="portfolio-single.html">
 				                 <?php
 				                 if ( has_post_thumbnail() ) {
-				                  echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'alignleft' ) );
+				                  echo get_the_post_thumbnail( $post->ID, 'projects'); //add_image_size('projects', 287, 295);
 				                  } ?>
 
 								<!-- <img src="images/portfolio/puremedia.jpg" alt="Puremedia"> -->
@@ -225,11 +226,11 @@ class Ianua_Projects_Admin {
 			     					   </div> 
 			                     <div class="link-icon"><i class="fa fa-plus"></i></div>
 			                  </a>
-			               </div>
+			               </div> <!--/item-wrap -->
 			        	</div> <!-- /folio-item -->
-			    </div>
-			</div>
-		</div>
+				    </div> <!--/portfolio-wrapper -->
+			</div> <!-- /row-items -->
+		</div> <!-- /project-list -->
 			            <?php endwhile;
 			            wp_reset_postdata(); ?>
 			    <?php $myvariable = ob_get_clean();
