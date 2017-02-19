@@ -141,7 +141,7 @@ class Ianua_Projects_Admin {
 			'description'           => __( 'Portfolio Plugin to show off your latest work', 'ianua-projects' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'editor', 'thumbnail', ),
-			'taxonomies'            => array( 'project-categories' ),
+			'taxonomies'            => array( 'project-categories', 'post_tag' ),
 			'hierarchical'          => true,
 			'public'                => true,
 			'show_ui'               => true,
@@ -175,16 +175,65 @@ class Ianua_Projects_Admin {
 	        'orderby' => 'title',
 	    ) );
 	    if ( $query->have_posts() ) { ?>
-	        <ul class="clothes-listing">
-	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-	            <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	            </li>
-	            <?php endwhile;
-	            wp_reset_postdata(); ?>
-	        </ul>
-	    <?php $myvariable = ob_get_clean();
-	    return $myvariable;
+	        <div id="content" class="project-list"> 
+
+			   	<div class="row project-intro">
+
+			   		<div class="twelve columns">
+
+			   			<h1>Our Works.</h1>
+
+			   			<p class="lead">Lorem ipsum Officia elit ad tempor dolore est ex incididunt incididunt occaecat culpa deserunt sunt labore in cillum ullamco magna in Excepteur consequat in reprehenderit proident mollit incididunt officia. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.fugiat ut enim nisi dolor quis laborum nostrud deserunt quis laboris.</p>  						
+
+			   		</div>
+
+			    </div>
+
+	         	<div class="row items">
+
+		     		<div class="project-filter">
+		     			<ul class="filter-group">		
+							<li><a href="#" data-filter="*" class="active">All</a></li>
+							<li><a href="#" data-filter=".iw-wordpress" >Wordpress</a></li>
+							<li><a href="#" data-filter=".iw-webdesign">Webdesign</a></li>
+							<li><a href="#" data-filter=".iw-branding">Branding</a></li>
+							<li><a href="#" data-filter=".iw-seo">SEO</a></li>
+						</ul>
+		     			
+		     		</div>
+		    <div id="portfolio-wrapper" class="iw-projects bgrid-third tab-bgrid-half stack">
+	        <?php while ( $query->have_posts() ) : $query->the_post();global $post;?>
+	        
+			         	<div class="bgrid folio-item <?php $posttags = get_the_tags();
+													if ($posttags) {
+													  foreach($posttags as $tag) {
+													    echo $tag->name . ' '; 
+													  }
+													};?>">
+			               <div class="item-wrap">
+			                  <a href="portfolio-single.html">
+				                 <?php
+				                 if ( has_post_thumbnail() ) {
+				                  echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'alignleft' ) );
+				                  } ?>
+
+								<!-- <img src="images/portfolio/puremedia.jpg" alt="Puremedia"> -->
+			                     <div class="overlay"></div>                       
+			                     <div class="portfolio-item-meta">
+			     					      <h5><?php the_title(); ?></h5>
+			                        <p>Wordpress</p>
+			     					   </div> 
+			                     <div class="link-icon"><i class="fa fa-plus"></i></div>
+			                  </a>
+			               </div>
+			        	</div> <!-- /folio-item -->
+			    </div>
+			</div>
+		</div>
+			            <?php endwhile;
+			            wp_reset_postdata(); ?>
+			    <?php $myvariable = ob_get_clean();
+			    return $myvariable;
 	    };
 	}
 
@@ -237,6 +286,8 @@ class Ianua_Projects_Admin {
 		wp_enqueue_script( $this->Ianua_Projects, plugin_dir_url( __FILE__ ) . 'js/ianua-projects-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+
 
 
 
