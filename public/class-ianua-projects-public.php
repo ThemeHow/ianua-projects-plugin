@@ -151,7 +151,7 @@ class Ianua_Projects_Public {
 			                  <a href="<?php the_permalink(); ?> ">
 				                 <?php
 				                 if ( has_post_thumbnail() ) {
-				                  echo get_the_post_thumbnail( $post->ID, 'projects'); //add_image_size('projects', 287, 295);
+				                  echo get_the_post_thumbnail( $post->ID, 'ianua-projects'); //add_image_size('projects', 287, 295);
 				                  } ?>
 
 								<!-- <img src="images/portfolio/puremedia.jpg" alt="Puremedia"> -->
@@ -176,6 +176,11 @@ class Ianua_Projects_Public {
 
 	function ianua_projects_register_shortcodes() { //https://developer.wordpress.org/reference/functions/add_shortcode/
 		add_shortcode( 'ianua-projects', array('Ianua_Projects_Public', 'ianua_post_listing_shortcode' ));
+	}
+
+	//add_action( 'init', array('Ianua_Projects_Public', 'ianua_projects_index_thumbnails' ));
+	function ianua_projects_index_thumbnails() {
+	    add_image_size('ianua-projects', 287, 295); //mobile
 	}
 
 }
