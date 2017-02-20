@@ -12,9 +12,7 @@ Ianua Projects is a portfolio plugin that allows you to display your latest proj
 
 == Description ==
 
-Ianua Projects is a modern portfolio plugin. It allows you to display an overview of your projects with filters us-
-ing tags. Clicking a menu item you will bring into view projects that fall under that menu item. Clicking on the 
-thumbnail will lead to the project itself where you can see all the information on that project.
+Ianua Projects is a modern portfolio plugin. It allows you to display an overview of your projects with filters using tags. Clicking a menu item you will bring into view projects that fall under that menu item. Clicking on the thumbnail will lead to the project itself where you can see all the information on that project.
 
 A few notes about the sections above:
 
