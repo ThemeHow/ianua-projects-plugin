@@ -1,21 +1,20 @@
 === Ianua Projects ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://ianua.imagewize.com/
-Tags: comments, spam
+Tags: portfolio, projects
 Requires at least: 3.0.1
-Tested up to: 3.4
+Tested up to: 4.7
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Ianua Projects is a portfolio plugin that allows you to display your latest projects in a nice visual and modern way.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Ianua Projects is a modern portfolio plugin. It allows you to display an overview of your projects with filters us-
+ing tags. Clicking a menu item you will bring into view projects that fall under that menu item. Clicking on the 
+thumbnail will lead to the project itself where you can see all the information on that project.
 
 A few notes about the sections above:
 
