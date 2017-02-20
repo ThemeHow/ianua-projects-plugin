@@ -155,7 +155,6 @@ class Ianua_Projects {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_admin, 'ianua_projects_cpt' );
 		$this->loader->add_action( 'init', $plugin_admin, 'ianua_projects_taxonomy' );
-		$this->loader->add_action( 'init', $plugin_admin, 'ianua_projects_register_shortcodes' );
 
 	}
 
@@ -172,6 +171,8 @@ class Ianua_Projects {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		//$this->loader->add_shortcode('rating', $plugin_public, 'rating');
+		$this->loader->add_action( 'init', $plugin_public, 'ianua_projects_register_shortcodes' );
 
 	}
 
