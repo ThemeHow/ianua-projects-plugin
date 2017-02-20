@@ -156,6 +156,7 @@ class Ianua_Projects_Public {
 				                    <div class="link-icon"><i class="fa fa-plus"></i></div>
 			                    </a>
 			                </div> <!--/item-wrap -->
+			                <?php // var_dump( get_intermediate_image_sizes() );?>
 			            </div> <!-- /folio-item -->
 			            <?php endwhile; ?>
 				    </div> <!--/portfolio-wrapper -->
@@ -174,7 +175,7 @@ class Ianua_Projects_Public {
 
 	//add_action( 'init', array('Ianua_Projects_Public', 'ianua_projects_index_thumbnails' ));
 	function ianua_projects_index_thumbnails() {
-	    add_image_size('ianua-projects', 287, 295); //mobile
+	    add_image_size('ianua-projects', 287, 295, true); // hard crop
 	}
 
 }
