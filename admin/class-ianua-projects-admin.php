@@ -162,6 +162,34 @@ class Ianua_Projects_Admin {
 
 	}
 	//add_action( 'init', 'ianua_projects_cpt', 0 );
+	
+	public function add_menu() {
+
+		// Top-level page
+		// add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+
+		// Submenu Page
+		// add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function);
+
+		add_submenu_page(
+			'edit.php?post_type=ianua_projects',
+			apply_filters( $this->Ianua_Projects . '-settings-page-title', esc_html__( 'Project Settings', 'ianua-projects' ) ),
+			apply_filters( $this->Ianua_Projects . '-settings-menu-title', esc_html__( 'Settings', 'ianua-projects' ) ),
+			'manage_options',
+			$this->Ianua_Projects . '-settings',
+			array( $this, 'page_options' )
+		);
+
+		add_submenu_page(
+			'edit.php?post_type=ianua_projects',
+			apply_filters( $this->Ianua_Projects . '-settings-page-title', esc_html__( 'Projects Help', 'ianua-projects' ) ),
+			apply_filters( $this->Ianua_Projects . '-settings-menu-title', esc_html__( 'Help', 'ianua-projects' ) ),
+			'manage_options',
+			$this->Ianua_Projects . '-help',
+			array( $this, 'page_help' )
+		);
+
+	} // add_menu()
 
 
 	/**
@@ -209,6 +237,9 @@ class Ianua_Projects_Admin {
 		wp_enqueue_script( $this->Ianua_Projects, plugin_dir_url( __FILE__ ) . 'js/ianua-projects-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+
+
 
 
 }
